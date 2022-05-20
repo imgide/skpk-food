@@ -1,0 +1,30 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>skpk food</title>
+         </head>
+    <body>
+        <div id="produk">
+
+        </div>
+        <script src = "database.js"></script>
+
+        <script type="text/javascript">
+            let hasil = "";
+            for (index in menu) {
+                hasil += "<img src='"+menu[index].foto+"'<br>";
+                hasil +="<h1>"+ menu[index].nama+"</h1><br>";
+                hasil += menu[index].harga+"<br>";
+                hasil +="<button onclick='myalert()'>tambahkan ke keranjang</button><br><br>"; 
+
+                    function myalert() {
+                        alert("pesanan diterima");
+                    }
+                }
+
+            document.getElementById("produk").innerHTML = hasil;
+
+        </script>
+    </body>
+</html>
+
